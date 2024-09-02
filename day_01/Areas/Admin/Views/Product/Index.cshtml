@@ -1,0 +1,55 @@
+﻿@model List<Product>
+<partial name="_Notification" />
+
+<div class="container mt-5">
+
+    <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+            <h2 class="text-primary fw-bold">Categories List</h2>
+        </div>
+        <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary shadow-sm">
+                <i class="bi bi-plus-circle"></i> Add Product
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="table-responsive shadow-lg p-3 bg-white rounded">
+        <table class="table table-hover table-striped align-middle">
+            <thead class="table-primary text-center">
+                <tr>
+                    <th>Title</th>
+                    <th>ISBN</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.Title</td>
+                        <td>@obj.ISBN</td>
+                        <td>@obj.ListPrice.ToString("C")</td>
+                        <td>@obj.Author</td>
+                        <td>@obj.category.Name</td>
+                        <td class="text-center">
+                            <a class="btn btn-sm btn-outline-warning shadow-sm" asp-controller="Product" asp-action="Upsert" asp-route-Id="@obj.Id">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-sm btn-outline-danger shadow-sm" asp-controller="Product" asp-action="Delete" asp-route-Id="@obj.Id">
+                                <i class="bi bi-trash3"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
