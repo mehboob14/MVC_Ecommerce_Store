@@ -12,9 +12,10 @@ This is an MVC .NET eCommerce application designed with an N-tier architecture, 
   - View discounts and add books to the shopping cart.
 
 - **Admin Functions:**
-  - Create new books with interactive rich-text descriptions using CkEditor.
+  - Create new books with interactive rich-text descriptions using CVEditor.
   - Update existing books.
   - Manage book categories with foreign key relationships.
+  - Filter books according to the Categories
 
 - **Architecture:**
   - **N-Tier Architecture:**
@@ -35,7 +36,7 @@ This is an MVC .NET eCommerce application designed with an N-tier architecture, 
   - Utilizes `IdentityDbContext` for user authentication and account management.
 
 - **Rich-Text Editor:**
-  - Integrates CkEditor for dynamic book descriptions with formatting options.
+  - Integrates CVE Editor for dynamic book descriptions with formatting options.
 
 ## Installation
 
