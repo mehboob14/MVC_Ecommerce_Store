@@ -8,6 +8,7 @@ This is an MVC .NET eCommerce application designed with an N-tier architecture, 
 
 - **Customer Functions:**
   - Create and manage accounts using `IdentityDbContext`.
+  - Recommendation based on recent activity.
   - Browse books with details including name, author, description, ISBN, and image.
   - View discounts and add books to the shopping cart.
 
