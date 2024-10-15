@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an MVC .NET eCommerce application designed with an N-tier architecture, featuring separate projects for Data Access, Models, and Utilities. The application allows customers to create accounts, browse books, see discounts, and add items to their cart. Admins can manage the book catalog, including creating new books with rich-text descriptions using CkEditor, updating existing books, and categorizing them (e.g., Programming, History). The application uses Entity Framework Core for database operations.
+Build an eCommerce web application using an N-tier architecture, featuring a separation of concerns for Data Access, Models, and Utilities. This application allows users to create accounts, browse books, see discounts, and add items to their cart. Admins can manage the book catalog, including creating new books with rich-text descriptions using CkEditor, updating existing books, and categorizing them (e.g., Programming, History). The application uses Entity Framework Core for database operations.
 
 ## Features
 
@@ -25,6 +25,10 @@ This is an MVC .NET eCommerce application designed with an N-tier architecture, 
     - **Data Access Layer:** Manages database operations using Entity Framework Core.
     - **Models Layer:** Defines the data structures, including books, categories, and user accounts.
     - **Utilities Layer:** Provides common functionalities and helper methods.
+
+ - ## Architecture Details
+
+- **Reopository Pattern
 
 ## Architecture Details
 
