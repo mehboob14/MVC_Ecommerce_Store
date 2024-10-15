@@ -11,7 +11,7 @@ namespace day_01.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         public readonly IUnitOfWork _unitOfWork;
-        // public readonly ApplicationDbConteXt _db;
+        
         public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;

@@ -1,12 +1,14 @@
 ﻿using Web.Models;
 using Microsoft.EntityFrameworkCore;
 using static System.Net.Mime.MediaTypeNames;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace Web.dataAccess.Data
 {
 
-    public class ApplicationDbConteXt : DbContext
-
+    public class ApplicationDbConteXt :IdentityDbContext<IdentityUser>
     {
         public ApplicationDbConteXt(DbContextOptions<ApplicationDbConteXt> options) : base(options)
         {
@@ -17,6 +19,8 @@ namespace Web.dataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Action", DisplayOrders = 1 },
                  new Category { Id = 2, Name = "History", DisplayOrders = 2 },
