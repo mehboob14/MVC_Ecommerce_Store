@@ -1,4 +1,4 @@
-# MVC .NET E-Commerce Store
+# Bookstore E-Commerce Web Application
 
 ## Description
 
